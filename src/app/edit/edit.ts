@@ -30,7 +30,7 @@ export class Edit implements OnInit{
   }
   
   loadBlog(id:number){
-    this.http.get<blogg>(`http://blogg-api.runasp.net/api/Blogg/getBlogbyid/${id}`).subscribe({
+    this.http.get<blogg>(`https://blogg-api.runasp.net/api/Blogg/getBlogbyid/${id}`).subscribe({
       next:(res:blogg)=>{
         this.blogEdit.patchValue(res);
       },
@@ -43,7 +43,7 @@ export class Edit implements OnInit{
   onEdit(){
     const id = this.route.snapshot.paramMap.get("id");
     const value = this.blogEdit.value;
-    this.http.put(`http://blogg-api.runasp.net/api/Blogg/editBlogg/${id}`,value,{responseType:"text"}).subscribe({
+    this.http.put(`https://blogg-api.runasp.net/api/Blogg/editBlogg/${id}`,value,{responseType:"text"}).subscribe({
       next:(res:any)=>{
         if(res=="Blog Edit Successfull"){
           alert(res);

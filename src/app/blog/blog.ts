@@ -36,7 +36,7 @@ onSubmit(){
   formData.append("file", this.selectedFile);
 
   // 1️⃣ প্রথমে image upload
-  this.http.post("http://blogg-api.runasp.net/api/Blogg/upload", formData)
+  this.http.post("https://blogg-api.runasp.net/api/Blogg/upload", formData)
   .subscribe({
     next:(res:any)=>{
       // 2️⃣ Upload শেষে URL form এ বসানো
@@ -44,7 +44,7 @@ onSubmit(){
 
       // 3️⃣ এবার blog save করা হবে
       const value = this.bloggForm.value;
-      this.http.post("http://blogg-api.runasp.net/api/Blogg/AddBlogg", value, { responseType: "text" })
+      this.http.post("https://blogg-api.runasp.net/api/Blogg/AddBlogg", value, { responseType: "text" })
       .subscribe({
         next:(msg)=>{
           if(msg == "Blogg added successfully"){

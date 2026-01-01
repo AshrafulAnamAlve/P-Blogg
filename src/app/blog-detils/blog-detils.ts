@@ -23,7 +23,7 @@ http=inject(HttpClient)
   }
 
   getblog(id:number){
-    this.http.get(`http://blogg-api.runasp.net/api/Blogg/getBlogbyid/${id}`).subscribe({
+    this.http.get(`https://blogg-api.runasp.net/api/Blogg/getBlogbyid/${id}`).subscribe({
       next:(res:any)=>{
         this.blog=res;
         this.cdr.detectChanges();

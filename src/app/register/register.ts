@@ -23,7 +23,7 @@ export class Register {
   onRegister(){
     debugger
     const value = this.RegForm.value;
-    this.http.post("http://blogg-api.runasp.net/api/Blogg/Register",value,{responseType: 'text'}).subscribe({
+    this.http.post("https://blogg-api.runasp.net/api/Blogg/Register",value,{responseType: 'text'}).subscribe({
       next:(res:any)=>{
         debugger
         if(res=="User registered successfully"){

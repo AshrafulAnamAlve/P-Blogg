@@ -21,7 +21,7 @@ export class Aboutus {
   onSubmit(){
     if(this.contuctForm.invalid)return alert("please fill all field");
 
-    this.http.post("http://blogg-api.runasp.net/api/Blogg/sendEmail",this.contuctForm.value,{responseType:"text"}).subscribe({
+    this.http.post("https://blogg-api.runasp.net/api/Blogg/sendEmail",this.contuctForm.value,{responseType:"text"}).subscribe({
       next:(res:any)=>{
         if(res=="Email sent successfully"){
           alert("Thank you for your message");

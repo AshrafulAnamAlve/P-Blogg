@@ -26,7 +26,7 @@ constructor(){
 //  }
 
  getallblog(){
-     this.http.get("http://blogg-api.runasp.net/api/Blogg/getAllblogg").subscribe({
+     this.http.get("https://blogg-api.runasp.net/api/Blogg/getAllblogg").subscribe({
     next:(res: any)=>{
       this.blogs=res;
       console.log("blog fatch successfull")

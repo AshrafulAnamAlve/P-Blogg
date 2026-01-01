@@ -20,7 +20,7 @@ export class Login {
   onLogin(){
     const val = this.loginForm.value;
     debugger
-    this.http.post("http://blogg-api.runasp.net/api/Blogg/Login",val).subscribe({
+    this.http.post("https://blogg-api.runasp.net/api/Blogg/Login",val).subscribe({
       next:(res: any)=>{
         if(res.message=="Login Seccusfull"){
           localStorage.setItem("isLoggedin","token");
