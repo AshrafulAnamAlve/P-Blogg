@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<!-- Hero Section -->
+<div class="hero">
+  <h1>Welcome to <span>PBlogg</span></h1>
+  <p>Your daily space for creative writing, thoughts & tech stories.</p>
+  <button (click)="scroll()" class="btn">Explore Blogs ↓</button>
+</div>
+
+<!-- Blog Preview Section -->
+<section id="blog">
+  <div class="blog-section">
+    <h2>Latest Blogs</h2>
+
+    <div class="blogs">
+      @for (item of blogs; track item.id) {
+      <div class="blog-card">
+        <h3>{{ item.title }}</h3>
+        <p class="description">{{ item.description }}</p>
+        <div class="meta">
+          <span class="category">{{ item.category }}</span>
+          <span class="date">{{ item.date | date:'mediumDate' }}</span>
+        </div>
+        <a class="read-more" [routerLink]="['/blog-detils',item.id]">Read More →</a>
+      </div>
+      }
+
+      @empty {
+        <p class="empty">No blogs posted yet. Be the first one! 😊</p>
+      }
+    </div>
+
+  </div>
+</section>

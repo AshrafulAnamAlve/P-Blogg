@@ -1,0 +1,86 @@
+/* 🌟 Overall Container */
+.blog-details-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px 35px;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eaeaea;
+}
+
+/* 🏷️ Title & Category Section */
+.blog-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.blog-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 15px;
+}
+.meta {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  color: #5c677d;
+  font-size: 15px;
+}
+.category {
+  background: #e0f7fa;
+  color: #00796b;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: 500;
+  border: 1px solid #b2dfdb;
+}
+.date {
+  font-style: italic;
+}
+
+/* 🖼️ Featured Image */
+.blog-image {
+  margin-top: 30px;
+}
+.blog-image img {
+  width: 30%;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+.blog-image img:hover {
+  transform: scale(1.01);
+}
+
+/* ✍️ Content Area */
+.blog-content {
+  margin-top: 35px;
+}
+.blog-content p {
+  font-size: 18px;
+  line-height: 1.9;
+  text-align: justify;
+  color: #1b263b;
+}
+
+/* 🔙 Back Button */
+.back-btn {
+  margin: 40px auto 0;
+  display: block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 121, 107, 0.3);
+}
+.back-btn:hover {
+  background: linear-gradient(135deg, #ff6a00, #ff3d00);
+  transform: translateY(-3px);
+}

@@ -1,0 +1,124 @@
+/* --- Global --- */
+:host{
+  display:block;
+  background:#f7f7f7;
+  font-family:Arial, sans-serif;
+}
+
+/* --- Hero Section --- */
+.hero{
+  text-align:center;
+  padding:180px 20px;
+  background:#121212;
+  color:white;
+}
+.hero h1{
+  font-size:45px;
+  margin-bottom:10px;
+  font-weight:600;
+}
+.hero h1 span{
+  color:#ff6a00;
+}
+.hero p{
+  font-size:18px;
+  opacity:0.8;
+  margin-bottom:25px;
+}
+.hero .btn{
+  padding:12px 28px;
+  border:none;
+  background:#ff6a00;
+  font-size:18px;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+.hero .btn:hover{
+  background:#ff4500;
+  transform:translateY(-4px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* --- Blog Section --- */
+.blog-section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+.blog-section h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:40px;
+}
+
+/* Blog Cards */
+.blogs{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+.blog-card{
+  width:300px;
+  padding:25px;
+  background:white;
+  border-radius:12px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+.blog-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+.blog-card h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+.blog-card .description{
+  font-size:15px;
+  opacity:0.8;
+  margin-bottom:12px;
+}
+.blog-card .meta{
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  margin-bottom:15px;
+}
+.blog-card .category{
+  background:#ffeded;
+  color:#ff4b00;
+  padding:4px 8px;
+  border-radius:6px;
+}
+.blog-card .date{
+  opacity:0.7;
+}
+.blog-card .read-more{
+  text-decoration:none;
+  font-weight:bold;
+  color:#ff6a00;
+  transition:0.3s;
+}
+.blog-card .read-more:hover{
+  color:#ff4500;
+  text-decoration:underline;
+}
+
+.empty{
+  text-align:center;
+  font-size:18px;
+  opacity:0.7;
+}
+.blog-card .description{
+  font-size:15px;
+  opacity:0.8;
+  margin-bottom:12px;
+  
+  /* MAKE ONE LINE ONLY */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

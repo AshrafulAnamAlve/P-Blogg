@@ -1,0 +1,45 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg" style="width: 100%; max-width: 450px;">
+    <div class="card-body p-5">
+      <h2 class="card-title text-center mb-4">Create Account</h2>
+      
+      <form [formGroup]="RegForm">
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Full Name</label>
+          <input type="text" formControlName="userName" class="form-control" id="fullname" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" formControlName="password" class="form-control" id="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" formControlName="confirmPassword" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="agree" required>
+          <label class="form-check-label" for="agree">
+            I agree to the <a href="#" class="text-decoration-none">Terms and Conditions</a>
+          </label>
+        </div>
+
+        <button type="button" (click)="onRegister()" class="btn btn-primary w-100 mb-3">Register</button>
+
+        <div class="text-center">
+          <p class="mb-0">Already have an account? <a routerLink="/login" class="text-decoration-none">Login here</a></p>
+        </div>
+      </form>
+
+      <hr class="my-4">
+
+    </div>
+  </div>
+</div>

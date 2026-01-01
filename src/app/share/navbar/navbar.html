@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PBlogg</title>
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navbar container */
+    .navbar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        background:#0d5252;
+        padding:15px 30px;
+    }
+
+    /* Title */
+    .navbar .logo{
+        color:white;
+        font-size: 26px;
+        font-weight:bold;
+        letter-spacing:1px;
+    }
+
+    /* Menu items */
+    .navbar ul{
+        list-style:none;
+        display:flex;
+        gap:25px;
+        margin:0;
+        padding:0;
+    }
+
+    .navbar ul li a{
+        text-decoration:none;
+        color:white;
+        padding:10px 14px;
+        border-radius:6px;
+        font-style: italic;
+        transition:0.3s ease;
+        font-size:22px;
+    }
+
+    /* Hover design */
+    .navbar ul li a:hover{
+        background:#ff6a00;
+        color:#fff;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(255,106,0,0.5);
+    }
+    .active-link {
+    background:#ff6a00;
+    color:#fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(255,106,0,0.5);
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">PBlogg</div>
+   
+<ul>
+    <li><a routerLink="/dashbord" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+    <li><a routerLink="/blog" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Create Blog</a></li>
+    <li><a routerLink="/profile" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Profile</a></li>
+     <li><a routerLink="/aboutus" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About Us</a></li>
+     <li><a style="cursor: pointer;" (click)="onLogout()" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Logout</a></li>
+  </ul>
+    
+</nav>
+
+</body>
+</html>

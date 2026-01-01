@@ -1,0 +1,21 @@
+<div class="blog-details-container">
+  <!-- Hero Section -->
+  <div class="blog-hero">
+    <h1>{{blog.title}}</h1>
+    <div class="meta">
+      <span class="category">{{blog.category}}</span>
+      <span class="date">{{blog.date | date:'mediumDate'}}</span>
+    </div>
+
+    <div class="blog-image" *ngIf="blog.imageUrl">
+      <img [src]="blog.imageUrl" alt="Blog Image">
+    </div>
+  </div>
+
+  <!-- Blog Content -->
+  <div class="blog-content">
+    <p>{{blog.description}}</p>
+  </div>
+
+  <button class="back-btn" routerLink="/dashbord">← Back to Home</button>
+</div>

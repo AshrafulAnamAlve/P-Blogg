@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="blog-form-container">
+  <h2>Create a New Blog</h2>
+  
+  <form [formGroup]="bloggForm">
+    <!-- Title -->
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input formControlName="title" type="text" id="title" placeholder="Enter blog title" />
+    </div>
+
+    <!-- Category -->
+    <div class="form-group">
+      <label for="category">Category</label>
+     <input formControlName="category" list="categories" id="category" name="category" placeholder="Select or type a category" />
+
+  <datalist id="categories">
+    <option value="Technology">
+    <option value="Lifestyle">
+    <option value="Education">
+    <option value="Health">
+    <option value="Travel">
+    <option value="Food">
+  </datalist>
+    </div>
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea formControlName="description" id="description" rows="6" placeholder="Write your blog content here..."></textarea>
+    </div>
+
+    <!-- Image (optional) -->
+    <div class="form-group">
+      <label for="image">Image (optional)</label>
+      <input type="file" (change)="onFileSelect($event)" id="image"/>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="button" (click)="onSubmit()">Create Blog</button>
+  </form>
+</div>

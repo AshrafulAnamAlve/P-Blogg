@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="profile-page">
+
+  <!-- User Info Card -->
+  <div class="user-card">
+    <div class="profile-pic">
+      <span class="person-icon">&#128100;</span> <!-- Unicode for person -->
+    </div>
+    <h2>{{user?.userName}}</h2>
+    <p>Email: {{user?.email}}</p>
+    <p>User ID: {{user?.id}}</p>
+  </div>
+
+  <!-- User Blogs Section -->
+  <div class="user-blogs">
+    <h3>My Blogs</h3>
+
+    <div class="blogs">
+      @for (item of blog; track $index) {
+        <div class="blog-card">
+        <h4>{{item.title}}</h4>
+        <p class="description">{{item.description}}</p>
+        <div class="meta">
+          <span class="category">{{item.category}}</span>
+          <span class="date">{{item.date | date:'mediumDate'}}</span>
+        </div>
+        <div class="actions">
+          <button class="edit-btn" [routerLink]="['/edit',item.id]">Edit</button>
+          <button class="delete-btn" (click)="onDelete(item.id)">Delete</button>
+        </div>
+      </div>
+      }
+      
+
+   
+
+    </div>
+  </div>
+
+</div>
