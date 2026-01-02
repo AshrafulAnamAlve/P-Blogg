@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace ApiBlogg.Models
 {
@@ -10,7 +10,7 @@ namespace ApiBlogg.Models
         public string description { get; set; }
         public string category { get; set; }
         public DateTime Date { get; set; }
-        public string imageUrl { get; set; }
+        public string? imageUrl { get; set; }
         public int userId { get; set; }
     }
 }

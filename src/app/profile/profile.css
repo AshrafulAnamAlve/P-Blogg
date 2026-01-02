@@ -142,3 +142,8 @@ body {
   background: #da190b;
   transform: translateY(-2px);
 }
+.empty{
+  text-align:center;
+  font-size:18px;
+  opacity:0.7;
+}

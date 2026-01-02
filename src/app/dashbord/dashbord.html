@@ -2,7 +2,12 @@
 
 <!-- Hero Section -->
 <div class="hero">
-  <h1>Welcome to <span>PBlogg</span></h1>
+<h1>
+  Hi <span class="name">{{ user?.userName }}</span>
+  <span class="wave">👋</span>
+  <br>
+  Welcome to <span>PBlogg</span>
+</h1>
   <p>Your daily space for creative writing, thoughts & tech stories.</p>
   <button (click)="scroll()" class="btn">Explore Blogs ↓</button>
 </div>

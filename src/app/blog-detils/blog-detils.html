@@ -1,10 +1,17 @@
 <div class="blog-details-container">
   <!-- Hero Section -->
   <div class="blog-hero">
-    <h1>{{blog.title}}</h1>
+    <h1>{{ blog.title }}</h1>
+
     <div class="meta">
-      <span class="category">{{blog.category}}</span>
-      <span class="date">{{blog.date | date:'mediumDate'}}</span>
+      <span class="category">{{ blog.category }}</span>
+      <span class="date">{{ blog.date | date:'mediumDate' }}</span>
+    </div>
+
+    <!-- ✍️ Blog Writer -->
+    <div class="author">
+      <span class="author-label">By-</span>
+      <span class="author-name">{{user?.userName}}</span>
     </div>
 
     <div class="blog-image" *ngIf="blog.imageUrl">
@@ -14,7 +21,7 @@
 
   <!-- Blog Content -->
   <div class="blog-content">
-    <p>{{blog.description}}</p>
+    <p>{{ blog.description }}</p>
   </div>
 
   <button class="back-btn" routerLink="/dashbord">← Back to Home</button>

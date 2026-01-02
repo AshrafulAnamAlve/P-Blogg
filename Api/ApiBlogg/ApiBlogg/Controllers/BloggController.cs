@@ -1,4 +1,4 @@
-﻿using ApiBlogg.Models;
+using ApiBlogg.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -89,6 +89,9 @@ namespace ApiBlogg.Controllers
             return Ok(bloggs);
 
         }
+
+      
+
         [HttpPut("editBlogg/{id}")]
         public ActionResult editBlogg(int id, Blogg obj)
         {
@@ -135,10 +138,10 @@ namespace ApiBlogg.Controllers
                 await file.CopyToAsync(stream);
             }
 
-            // Client e return korbo image er path
-            var imageUrl = $"https://localhost:7126/images/{fileName}";
+      // Client e return korbo image er path
+        var imageUrl = $"{Request.Scheme}://{Request.Host}/images/{fileName}";
 
-            return Ok(new { imageUrl });
+      return Ok(new { imageUrl });
         }
 
         [HttpPost("sendEmail")]
@@ -158,7 +161,15 @@ namespace ApiBlogg.Controllers
             return Ok("Email sent successfully");
         }
 
-
+    [HttpGet("getUserByBlogg/{id}")]
+    public ActionResult getUserByBlog(int id)
+    {
+      var user = context.Registers.FirstOrDefault(u=> u.id == id);
+      if(user == null) return NotFound("User not found");
+      return Ok(user);
 
     }
+
+
+  }
 }
